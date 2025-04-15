@@ -1,0 +1,70 @@
+h1{
+  color: red;
+  font-size:40px;
+  font-family:Impact;
+  font-weight: normal;
+}
+.destacar{
+  color: red;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+  text-align: right;
+  margin: 40px
+}
+
+.subtitulo_portada{
+  color: rgb(0, 0, 0);
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: right;
+  margin: 40px
+}
+.info_pequena{
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 1;
+  line-height: 10%;
+}
+.info_pequena_importante{
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 30%;
+}
+.intro {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  
+}
+.intro h1 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: left;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+.intro p {
+  margin-bottom: 12px;
+}
+.intro span {
+  font-size: 10px;
+  text-align: right;
+
+}
+
+.intro span {
+  font-size: 10px;
+  text-align: right;
+
+}
