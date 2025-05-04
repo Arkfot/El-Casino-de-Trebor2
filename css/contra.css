@@ -1,36 +1,78 @@
 body{
     margin: 0;
     font-family: sans-serif;
-    background: #0e608b;
+    background: #003769;
 }
 .conjunto{
-    background: #0e507a;
     width: 200px;
-    height: 50px;
+    height: 60px;
     margin: auto;
-    margin-top: 15%;
+    margin-top: 40vh;
     box-sizing: border-box;
     border-radius: 3px;
     justify-content: center;
     position: relative;
-    box-shadow: 0 0 5px #012;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition-property: box-shadow, background-color;
+    transition-duration: 1s;
+}
+.conjunto:hover{
+    box-shadow: 0 0 6px #012;
+    background-color: #075ca1;
+}
+#error-msg{
+    box-sizing: border-box;
+    color:transparent;
+    text-transform: capitalize;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: right;
+    transition-property: color, background-color;
+    transition-duration: 1s;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    border-radius:0px 0px 3px 3px;
+    padding-right: 10px;
+}
+.conjunto:hover #error-msg{
+    color: rgb(1, 1, 1); 
+    background-color: #92041094;
 }
 .contraseña{
+    box-sizing: border-box;
+    background-color:transparent;
     border: none;
     padding: 5px 10px;
     border-radius: 3px;
-    background-color:#212;
-    color:#212;
+    color:transparent;
     font-size: 12px;
     position: relative;
-    transition-property: color;
+    transition-property: color,background-color, border, box-shadow;
     transition-duration:1s;
 }
-.contraseña:hover{
-    color:#f12;
-    
+.conjunto:hover .contraseña {
+    color: #a3000e;
+    background-color: #c0bebe;
+    box-shadow: 0 0 8px #020b15;
+    border: 1px solid #150308;
 }
+.contraseña::placeholder {
+    color: transparent;
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity, color;
+    transition-duration: 1s;
+    font-weight: bold;
+    }
+.conjunto:hover .contraseña::placeholder {
+    opacity: 70%;
+    color: #920410;
+}
+.contraseña:focus {
+    outline: none;
+    }

@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<head>
-    <title>Classroom</title>
-    <link rel="stylesheet" href="css/contra.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <div class="conjunto">
-        <form>
-            <input class="contraseña" type="password" placeholder="password">
-        </form>
-    </div>
-</body>
+<html lang="en">
+    <head>
+        <title>Classroom</title>
+        <link rel="stylesheet" href="css/contra.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/contra.js" defer></script>
+    </head>
+    <body>
+        <div class="conjunto">
+            <form id="formulario">
+                <input type="password" id="passwordInput" class="contraseña"  placeholder="password" >
+                <button type="submit" style="display:none;"></button>
+                <div id="error-msg"></div>
+            </form>
+        </div>
+    </body>
+</html>
