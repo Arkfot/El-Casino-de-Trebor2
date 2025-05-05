@@ -30,7 +30,7 @@ html, body {
 .destacar{
   color: #c40000;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 35px;
+  font-size: 2vw;
   text-align: right;
   margin: 5.3vw 2vw;
   position: relative;
@@ -39,24 +39,54 @@ html, body {
 .destacar:first-child{
   text-shadow: 1px 1px 6px #000;
   font-size: 40px;
-  position: relative;
+  position: absolute;
+  right: 0;
+  top:15px;
+  color: #c70707;
+}
+.destacar:nth-child(2){
+  position: absolute;
+  right: 0;
+  top:138px;
+  transition-property: top;
+  transition-duration: 0.35s;
 }
 .destacar:nth-child(2):hover{
   color:#000;
   text-shadow: 0px 0px 6px #fff;
+  top:133px;
+}
+.destacar:nth-child(3){
+  position: absolute;
+  right: 0;
+  top:240px;
+  transition-property: top;
+  transition-duration: 0.35s;
+  }
+.destacar:nth-child(3):hover{
+  color:#000;
+  text-shadow: 0px 0px 6px #fff;
+  top:235px;
 }
 .destacar:last-child{
   color: #a00;
   position: absolute;
   right: 0;
-  bottom: 25px;
-  margin-top: 190px;
-  text-shadow: 1px 1px 6px #000;
-  background: #292929;
+  bottom: 40px;
+  margin-right:0;
+  box-shadow: -1px 1px 12px #012;
+  text-shadow: 1px 1px 3px #000;
+  background-color: #2e2e2e;
   height: 75px;
-  padding: 15px 5px 0px 15px;
+  padding: 16.7px 10px 0px 15px;
   border-radius: 7px 0 0 7px;
+  transition: right 0.35s, background-color 0.35s, color 0.35s, border-right 0.1s;
+}
+.destacar:last-child:hover{
   border-right: 3px solid #000;
+  right:15px;
+  background: #2a2a2a;
+  color:#990000;
 }
 .targeta{
   position:absolute;
@@ -70,9 +100,8 @@ html, body {
   line-height: 1.6;
   box-shadow: 0 0 10px #222;
   border-left:4px solid #001;
-  top:40vmin;
+  top:30vmin;
   margin-left: 1vw;
-  max-height: 50vw;
   background: linear-gradient(#aaa,#eee)
 }
 .targeta h1 {
