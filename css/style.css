@@ -14,23 +14,26 @@ html, body {
   background: transparent url("../images/casinotoqueverde.jpg") top fixed no-repeat;
   background-position: cover;
   background-size: 100vw;
-  height:90vh;
+  height:95vh;
   position: relative;
   padding: 2px;
+  flex-direction: column; /* Por defecto: tarjeta abajo */
 }
 .titulo{
   color: #a70000;
-  font-size:100px;
-  font-family:Impact;
+  font-size:6vw;
+  font-family:"Impact";
   font-weight: normal;
-  position: absolute;
+  width: 50vw;
+  position: relative;
   margin:30px;
   text-shadow: 4px 3px 5px #000;
+  position: relative;
 }
 .destacar{
   color: #c40000;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 2vw;
+  font-size: 3vmax;
   text-align: right;
   margin: 5.3vw 2vw;
   position: relative;
@@ -38,7 +41,6 @@ html, body {
 }
 .destacar:first-child{
   text-shadow: 1px 1px 6px #000;
-  font-size: 40px;
   position: absolute;
   right: 0;
   top:15px;
@@ -47,14 +49,14 @@ html, body {
 .destacar:nth-child(2){
   position: absolute;
   right: 0;
-  top:138px;
+  top:135px;
   transition-property: top;
   transition-duration: 0.35s;
 }
 .destacar:nth-child(2):hover{
   color:#000;
   text-shadow: 0px 0px 6px #fff;
-  top:133px;
+  top:130px;
 }
 .destacar:nth-child(3){
   position: absolute;
@@ -91,8 +93,9 @@ html, body {
 .targeta{
   position:absolute;
   padding: 12px 18px;
-  text-align: justify;
-  width: 35vw;
+  text-align: left;
+  width: 45vw;
+  max-height: 400px;
   background-color:#eee;
   border-radius: 0px 12px 12px 0px;
   font-family: 'Segoe UI', sans-serif;
@@ -100,7 +103,7 @@ html, body {
   line-height: 1.6;
   box-shadow: 0 0 10px #222;
   border-left:4px solid #001;
-  top:30vmin;
+  margin-top:4px;
   margin-left: 1vw;
   background: linear-gradient(#aaa,#eee)
 }
@@ -160,4 +163,19 @@ html, body {
 }
 .enlaces a:hover {
   text-decoration: underline;
+}
+@media (max-width: 854px) {
+  .box {
+    flex-direction: row; /* En lugar de column */
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .targeta {
+    width: auto; /* O un max-width fijo si necesitas limitarlo */
+    max-width: 600px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
 }
