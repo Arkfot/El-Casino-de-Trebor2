@@ -132,7 +132,7 @@ html, body {
 .pie{
   position: relative;
   padding: 5px;
-  height: 7vw;
+  height: auto;
   width: 100%;
   background: linear-gradient(#333,#222);
   border-top: 2px solid #111;
