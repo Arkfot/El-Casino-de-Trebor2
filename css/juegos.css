@@ -75,6 +75,25 @@ body {
 .categorias li a:hover {
   background-color: #0055aa;
 }
+.boton-volver-arriba {
+position:fixed;
+bottom: 325px;
+left: 50px;
+background-color: #003366;
+color: white;
+padding: 10px 14px;
+border-radius: 8px;
+text-decoration: none;
+font-size: 14px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+transition: background-color 0.3s ease;
+z-index: 999;
+}
+
+
+.boton-volver-arriba:hover {
+  background-color: #0055aa;
+}
 .zona-juegos {
   display: flex;
   flex-wrap: wrap;
