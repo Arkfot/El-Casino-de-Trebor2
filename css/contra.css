@@ -1,7 +1,7 @@
 body{
     margin: 0;
     font-family: sans-serif;
-    background: #003769;
+    background: #eee;
 }
 .conjunto{
     width: 200px;
@@ -21,7 +21,7 @@ body{
 }
 .conjunto:hover{
     box-shadow: 0 0 6px #012;
-    background-color: #075ca1;
+    background-color: #5f0000;
 }
 #error-msg{
     box-sizing: border-box;
@@ -40,7 +40,7 @@ body{
     padding-right: 10px;
 }
 .conjunto:hover #error-msg{
-    color: rgb(1, 1, 1); 
+    color: #010101; 
     background-color: #92041094;
 }
 .contraseña{

@@ -10,9 +10,33 @@ body {
 }
 
 .barra {
+  position: relative;
   background-color: #001025f9;
   color: #f1f1f1;
-  padding: 30px;
+  padding: 45px 25px;
+  display: flex;
+  justify-content: space-between; /* separa título/categorías a la izquierda y botón a la derecha */
+  align-items: center;
+  flex-wrap: wrap; /* permite que se acomode en varias líneas si es necesario */
+} 
+.cerrar-sesion {
+  position: fixed;        /* Fijo en pantalla */
+  top: 20px;              /* Separación desde el borde superior */
+  right: 20px;            /* Separación desde el borde derecho */
+  
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 1000;          /* Asegura que esté por encima de todo */
+}
+
+.cerrar-sesion:hover {
+  background-color: #666;
 }
 
 #titulo {
@@ -28,21 +52,27 @@ body {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  padding: 10px 15px;
-  gap: 15px;
+  padding: 10px 0;
+  gap: 20px;
   background-color: transparent;
 }
 
 .categorias li {
+  border-radius: 8px;
+  overflow: hidden; /* Esto asegura que los bordes del <a> respeten el borde redondeado */
+}
+.categorias li a {
+  display: block;
   background-color: #003366;
-  padding: 8px 12px;
+  padding: 8px 13px;
   border-radius: 8px;
   font-size: 14px;
-  cursor: pointer;
+  color: white;
+  text-decoration: none;
   transition: background-color 0.3s ease;
+  margin-right: 15px;
 }
-
-.categorias li:hover {
+.categorias li a:hover {
   background-color: #0055aa;
 }
 .zona-juegos {
@@ -83,4 +113,47 @@ h2 {
 .juego img:hover {
   transform: scale(1.01);
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.pie{
+  position: relative;
+  padding: 5px;
+  height: auto;
+  width: 100%;
+  background: linear-gradient(#333,#222);
+  border-top: 2px solid #111;
+  text-transform:uppercase ;
+}
+.info_pequena_importante{
+  font-weight: 800;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 12px;
+  position: absolute;
+  right:4px
+}
+.info_pequena{
+  font-weight: 800;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 12px;
+  text-transform:capitalize;
+  margin-left: 10px;
+}
+.enlaces{
+  font-weight: 800;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 12px;
+  text-transform:uppercase;
+  text-align: center;
+  margin-top: 15px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color:#111
+}
+.enlaces a {
+  color: #006;
+  text-decoration: none;
+}
+.enlaces a:hover {
+  text-decoration: underline;
 }

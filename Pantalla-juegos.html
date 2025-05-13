@@ -5,8 +5,33 @@
   <title>Classroom</title>
   <link rel="stylesheet" href="css/pantalla.css">
   <script src="js/pantalla.js" defer></script>
+  <script src="js/proteccion.js"></script>
 </head>
 <body>
-  <iframe id="iframe-juego" width="1100" height="800" allowfullscreen></iframe>
+<div class="contenedor-iframe">
+  <iframe id="iframe-juego" src="juego.html" allowfullscreen></iframe>
+  <div class="boton-wrapper">
+      <button onclick="abrirFullscreen()" class="pantalla-completa">Pantalla Completa</button>
+      <a  class="volver" href="juegos.html">Volver</a>
+      <a  class="esconder" href="https://classroom.google.com/u/1/h">Esconder</a>
+      <button onclick="localStorage.removeItem('ultimoAcceso'); window.location.href='index.html';" class="cerrar-sesion">
+        Cerrar sesión
+      </button>
+  </div>
+</div>
+<script>
+function abrirFullscreen() {
+  const iframe = document.getElementById('iframe-juego');
+  if (iframe.requestFullscreen) {
+    iframe.requestFullscreen();
+  } else if (iframe.webkitRequestFullscreen) { // Safari
+    iframe.webkitRequestFullscreen();
+  } else if (iframe.msRequestFullscreen) { // IE11
+    iframe.msRequestFullscreen();
+  } else {
+    alert("Fullscreen no está soportado en este navegador.");
+  }
+}
+</script>
 </body>
 </html>

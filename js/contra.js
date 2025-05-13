@@ -3,17 +3,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const passwordInput = document.getElementById("passwordInput");
   const errorMsg = document.getElementById("error-msg");
   const contraseñaCorrecta = "1234";
+  const tiempoExpiracion = 5 * 60 * 60 * 1000; // ⏱️ 5 horas en milisegundos
+  const ultimoAcceso = localStorage.getItem("ultimoAcceso");
 
+  // Si la contraseña sigue siendo válida, redirigir automáticamente
+  if (ultimoAcceso && (Date.now() - parseInt(ultimoAcceso) < tiempoExpiracion)) {
+    window.location.href = "juegos.html";
+    return;
+  }
+
+  // Al enviar el formulario
   form.addEventListener("submit", (e) => {
-      e.preventDefault(); // Evita que recargue la página
+    e.preventDefault();
 
-      if (passwordInput.value === contraseñaCorrecta) {
-          window.location.href = "../pagina.html";
-      } else errorMsg.textContent = "Contraseña incorrecta";
-      
-      // Ocultar el mensaje después de 3 segundos
+    if (passwordInput.value === contraseñaCorrecta) {
+      localStorage.setItem("ultimoAcceso", Date.now());
+      window.location.href = "juegos.html";
+    } else {
+      errorMsg.textContent = "Contraseña incorrecta";
       setTimeout(() => {
         errorMsg.textContent = "";
       }, 3000);
+    }
   });
 });
