@@ -15,18 +15,17 @@ body {
   position: relative;
   background-color: #001025f9;
   color: #f1f1f1;
-  padding: 45px 25px;
+  padding: 25px 25px;
   display: flex;
-  justify-content: space-between; /* Separa el título a la izquierda y el botón a la derecha */
+  flex-direction: column; /* ← Antes usabas row */
   align-items: center;
-  flex-wrap: wrap; /* Permite que se acomode en varias líneas si es necesario */
   width: 100%;
   text-align: center;
-} 
+}
 .cuadradito {
   position: fixed;
   top: 350px;
-  right: 58px;
+  right: 40px;
   width: 240px;
   padding: 20px;
   background-color: #222;
@@ -91,9 +90,7 @@ body {
 }
 
 #titulo {
-  background: transparent;
-  margin-left: 15px;
-  margin-bottom: 17px;
+  margin-bottom:30px;
   font-weight: 800;
   font-size: 40px;
   text-transform: capitalize;
@@ -104,7 +101,7 @@ body {
 
 #titulo img {
   margin-right: 15px;
-  width: 55px;
+  width: 60px;
   height: auto;
 }
 
@@ -189,6 +186,7 @@ h2 {
   position: relative;
   padding: 5px;
   height: auto;
+  margin-top:100px;
   width: 100%;
   background: linear-gradient(#333,#222);
   border-top: 2px solid #111;
@@ -231,4 +229,73 @@ h2 {
 }
 .enlaces a:hover {
   text-decoration: underline;
+}
+
+
+
+
+.busqueda-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.buscador-wrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+}
+
+#buscador {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+.sugerencias {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.sugerencias-lista {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  list-style: none;
+  margin-top: 5px;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+  z-index: 10;
+  border-radius: 8px;
+  color: white;
+}
+
+.sugerencias-lista li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-bottom: 1px solid #333;
+  transition: background-color 0.2s;
+}
+
+.sugerencias-lista li:hover {
+  background-color: #333;
+}
+
+
+.sugerencias-lista.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sugerencias-lista li.seleccionado {
+  background-color: #0055aa;
+  color: white;
 }

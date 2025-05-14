@@ -6,27 +6,36 @@
   <title>Classroom</title>
   <link rel="stylesheet" href="css/juegos.css">
   <script src="js/esconder.js"></script>
-  <link rel="icon" href="images/chatgpt.png" type="image/png">
+  <script src="js/busqueda.js"></script>
+  <link rel="icon" href="images/icon2.png" type="image/png">
 </head>
 <body>
-  <div class="barra">
-    <h1 id="titulo">
-      <img src="images/chatgpt.png">
-      El Casino de Trebor
-    </h1>
-    <div class="categorias-container">
-      <nav class="categorias">
-        <ul>
-          <li><a href="#accion">🎮 Acción</a></li>
-          <li><a href="#coches">🏎️ Carreras y Conducción</a></li>
-          <li><a href="#habilidad">🤯 Habilidad</a></li>
-          <li><a href="#deportes">🏀 Deportes</a></li>
-          <li><a href="#puzzles">🧩 Puzzles y Demás</a></li>
-          <li><a href="#arcade">🕹️ Arcade y Clásicos</a></li>
-        </ul>
-      </nav>
-    </div>
+<div class="barra">
+  <h1 id="titulo">
+    <img src="images/chatgpt.png">
+    El Casino de Trebor
+  </h1>
+
+  <div class="busqueda-container">
+    <div class="buscador-wrapper">
+      <input type="text" id="buscador" oninput="buscarJuegos()" placeholder="Buscar juegos..." autocomplete="off">
+      <ul id="sugerencias" class="sugerencias-lista"></ul>
   </div>
+  </div>
+
+  <div class="categorias-container" id="categorias">
+    <nav class="categorias">
+      <ul>
+        <li><a href="#accion">🎮 Acción</a></li>
+        <li><a href="#coches">🏎️ Carreras y Conducción</a></li>
+        <li><a href="#habilidad">🤯 Habilidad</a></li>
+        <li><a href="#deportes">🏀 Deportes</a></li>
+        <li><a href="#puzzles">🧩 Puzzles y Demás</a></li>
+        <li><a href="#arcade">🕹️ Arcade y Clásicos</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
 <div class="cuadradito">
   <button class="cerrar-sesion" onclick="localStorage.removeItem('ultimoAcceso'); window.location.href='index.html';">
     Cerrar sesión
@@ -42,7 +51,7 @@
   </div>
 </div>
   </div>
-  <h2 id="accion">🎮 Acción</h2>
+  <h2 id="accion" class="titulo-categoria">🎮 Acción</h2>
   <div class="zona-juegos">
   <div class="juego"><a href="Pantalla-juegos.html?juego=evilg"><img src="images/imag/Evilglitch.png"></a><h3>Evilglitch</h3><p></p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=friendlyf"><img src="images/imag/FriendlyFire.png"></a><h3>Friendly Fire</h3><p></p></div>
@@ -56,7 +65,7 @@
   <div class="juego"><a href="Pantalla-juegos.html?juego=Ninja-EvilCorp"><img src="images/imag/ninja.png"></a><h3>Ninja VS EvilCorp</h3><p></p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=Pushback"><img src="images/imag/Pushback.png"></a><h3>Pushback</h3><p></p></div>
   </div>
-  <h2 id="coches">🏎️ Carreras y Conducción</h2>
+  <h2 id="coches" class="titulo-categoria">🏎️ Carreras y Conducción</h2>
   <div class="zona-juegos">
   <div class="juego"><a href="Pantalla-juegos.html?juego=Drifthunters"><img src="images/imag/drifth.png"></a><h3>Drifthunters</h3><p></p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=Gop-Her-Kart"><img src="images/imag/Gop Her Kart.jpeg"></a><h3>Gop Her Kart</h3><p></p></div>
@@ -64,8 +73,9 @@
   <div class="juego"><a href="Pantalla-juegos.html?juego=Highway-Traffic"><img src="images/imag/highcar.png"></a><h3>Highway Traffic</h3><p></p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=Drive-Mad"><img src="images/imag/drivemad.avif"></a><h3>Drive Mad</h3><p></p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=tunnel-rush"><img src="images/imag/Tunnel Rush.jpg"></a><h3>Tunnel Rush</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Metal3"><img src="images/imag/Scrap Metal 3.jpg"></a><h3>Scrap Metal 3</h3><p>⚠️El ruido no va⚠️</p></div>
   </div>
-  <h2 id="habilidad">🤯 Habilidad</h2>
+  <h2 id="habilidad" class="titulo-categoria">🤯 Habilidad</h2>
   <div class="zona-juegos">
   <div class="juego"><a href="Pantalla-juegos.html?juego=Baldi-Basics"><img src="images/imag/baldi.jpg"></a><h3>Baldi-Basics</h3><p></p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=Chromain-Incident"><img src="images/imag/chroma.png"></a><h3>Chromain Incident</h3><p></p></div>
@@ -93,13 +103,13 @@
   <div class="juego"><a href="Pantalla-juegos.html?juego=Ducklife5"><img src="images/imag/ducklife.png"></a><h3>Ducklife 5</h3><p>⚠️En pruebas⚠️</p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=Sleep-beat"><img src="images/imag/Sleepìng Beauty.png"></a><h3>Sleeping Beauty</h3><p></p></div>
   </div>
-  <h2 id="deportes">🏀 Deportes</h2>
+  <h2 id="deportes" class="titulo-categoria">🏀 Deportes</h2>
   <div class="zona-juegos">
   <div class="juego"><a href="Pantalla-juegos.html?juego=Basket-Bros-IO"><img src="images/imag/basketbros.png"></a><h3>Basket Bros IO</h3><p></p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=BasketBall-Legends-2020"><img src="images/imag/basketlegen.png"></a><h3>BasketBall Legends 2020</h3><p></p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=Basketball-Stars"><img src="images/imag/basketballstars.png"></a><h3>Basketball Stars</h3><p></p></div>
   </div>
-  <h2 id="puzzles">🧩 Puzzles y Demás</h2>
+  <h2 id="puzzles" class="titulo-categoria">🧩 Puzzles y Demás</h2>
   <div class="zona-juegos">
   <div class="juego"><a href="Pantalla-juegos.html?juego=Breaklock"><img src="images/imag/break.png"></a><h3>Breaklock</h3><p></p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=Captain-Callisto"><img src="images/imag/calisto.png"></a><h3>Captain Callisto</h3><p></p></div>
@@ -119,7 +129,7 @@
   <div class="juego"><a href="Pantalla-juegos.html?juego=Riddles-School-2"><img src="images/imag/Riddles School 2.avif"></a><h3>Riddles School 2</h3><p></p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=Pushback"><img src="images/imag/Pushback.png"></a><h3>Pushback</h3><p></p></div>
   </div>
-  <h2 id="arcade">🕹️ Arcade y Clásicos</h2>
+  <h2 id="arcade" class="titulo-categoria">🕹️ Arcade y Clásicos</h2>
   <div class="zona-juegos">
   <div class="juego"><a href="Pantalla-juegos.html?juego=BackCountry"><img src="images/imag/backcountry.png"></a><h3>BackCountry</h3><p>Descripción o aenlace</p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=Cookie-Clicker"><img src="images/imag/Cooki.png"></a><h3>Cookie Clicker</h3><p></p></div>
@@ -139,7 +149,6 @@
   <div class="juego"><a href="Pantalla-juegos.html?juego=RedBall4"><img src="images/imag/RedBall 4.png"></a><h3>RedBall 4</h3><p></p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=RetroBowl"><img src="images/imag/RetroBowl.avif"></a><h3>RetroBowl</h3><p></p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=Roadblocks"><img src="images/imag/roadblocks.png"></a><h3>Roadblocks</h3><p></p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Metal3"><img src="images/imag/Scrap Metal 3.jpg"></a><h3>Scrap Metal 3</h3><p></p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=Slope"><img src="images/imag/Slope.png"></a><h3>Slope</h3><p></p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=Slope2"><img src="images/imag/slope2.png"></a><h3>Slope 2</h3><p></p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=Snow-Battle"><img src="images/imag/snow.jpeg"></a><h3>Snow Battle</h3><p></p></div>
