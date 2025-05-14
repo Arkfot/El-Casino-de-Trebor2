@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
   background-color: #121212;
   font-family: Arial, sans-serif;
@@ -15,15 +17,28 @@ body {
   color: #f1f1f1;
   padding: 45px 25px;
   display: flex;
-  justify-content: space-between; /* separa título/categorías a la izquierda y botón a la derecha */
+  justify-content: space-between; /* Separa el título a la izquierda y el botón a la derecha */
   align-items: center;
-  flex-wrap: wrap; /* permite que se acomode en varias líneas si es necesario */
+  flex-wrap: wrap; /* Permite que se acomode en varias líneas si es necesario */
+  width: 100%;
+  text-align: center;
 } 
+.cuadradito {
+  position: fixed;
+  top: 350px;
+  right: 58px;
+  width: 240px;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
 .cerrar-sesion {
-  position: fixed;        /* Fijo en pantalla */
-  top: 20px;              /* Separación desde el borde superior */
-  right: 20px;            /* Separación desde el borde derecho */
-  
   background-color: #444;
   color: white;
   border: none;
@@ -32,11 +47,47 @@ body {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s;
-  z-index: 1000;          /* Asegura que esté por encima de todo */
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.cerrar-sesion:hover {
+.fila-botones {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.boton-esconder,
+.boton-volver-arriba {
+  flex: 1;
+  box-sizing: border-box;
+  border: none;
+  padding: 10px 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.boton-esconder {
+  background-color: #444;
+  color: white;
+}
+
+.boton-volver-arriba {
+  background-color: #003366;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.cerrar-sesion:hover,
+.boton-esconder:hover {
   background-color: #666;
+}
+
+.boton-volver-arriba:hover {
+  background-color: #0055aa;
 }
 
 #titulo {
@@ -46,6 +97,22 @@ body {
   font-weight: 800;
   font-size: 40px;
   text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#titulo img {
+  margin-right: 15px;
+  width: 55px;
+  height: auto;
+}
+
+/* Centrar las categorías en su propio contenedor */
+.categorias-container {
+  display: flex;
+  justify-content: center;  /* Centra las categorías en su contenedor */
+  flex: 1; /* Hace que ocupe el espacio restante entre el título y el botón */
 }
 
 .categorias ul {
@@ -55,12 +122,14 @@ body {
   padding: 10px 0;
   gap: 20px;
   background-color: transparent;
+  justify-content: center; /* Asegura que las categorías estén centradas dentro del contenedor */
 }
 
 .categorias li {
   border-radius: 8px;
-  overflow: hidden; /* Esto asegura que los bordes del <a> respeten el borde redondeado */
+  overflow: hidden;
 }
+
 .categorias li a {
   display: block;
   background-color: #003366;
@@ -72,28 +141,11 @@ body {
   transition: background-color 0.3s ease;
   margin-right: 15px;
 }
+
 .categorias li a:hover {
   background-color: #0055aa;
 }
-.boton-volver-arriba {
-position:fixed;
-bottom: 325px;
-left: 50px;
-background-color: #003366;
-color: white;
-padding: 10px 14px;
-border-radius: 8px;
-text-decoration: none;
-font-size: 14px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-transition: background-color 0.3s ease;
-z-index: 999;
-}
 
-
-.boton-volver-arriba:hover {
-  background-color: #0055aa;
-}
 .zona-juegos {
   display: flex;
   flex-wrap: wrap;
@@ -108,7 +160,7 @@ z-index: 999;
 h2 {
   text-align: center;
   font-size: 2em;
-  margin: 20px 0px;
+  margin: 45px 0px;
   color: #ffffff; /* o usa un tono claro como #eee o #ccc */
 }
 .juego {
@@ -141,6 +193,7 @@ h2 {
   background: linear-gradient(#333,#222);
   border-top: 2px solid #111;
   text-transform:uppercase ;
+  color:#eee;
 }
 .info_pequena_importante{
   font-weight: 800;
@@ -155,23 +208,26 @@ h2 {
   font-size: 12px;
   text-transform:capitalize;
   margin-left: 10px;
+  margin-top:18px;
 }
 .enlaces{
+  box-sizing: border-box;
   font-weight: 800;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 12px;
   text-transform:uppercase;
   text-align: center;
-  margin-top: 15px;
-  padding-right: 30px;
+  padding-right: 17px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  color:#111
+  color:#111;
+  margin-bottom: 10px;
 }
 .enlaces a {
   color: #006;
   text-decoration: none;
+  margin-top:8px;
 }
 .enlaces a:hover {
   text-decoration: underline;

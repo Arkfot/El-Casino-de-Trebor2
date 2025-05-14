@@ -5,135 +5,153 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Classroom</title>
   <link rel="stylesheet" href="css/juegos.css">
+  <script src="js/esconder.js"></script>
+  <link rel="icon" href="images/chatgpt.png" type="image/png">
 </head>
 <body>
   <div class="barra">
-    <p id="titulo">El casino de Trebor</p>
-    <nav class="categorias">
-      <ul>
-        <li><a href="#accion">🎮 Acción</a></li>
-        <li><a href="#coches">🏎️ Carreras y Conducción</a></li>
-        <li><a href="#habilidad">🤯 Habilidad</a></li>
-        <li><a href="#deportes">🏀 Deportes</a></li>
-        <li><a href="#puzzles">🧩 Puzzles y Demás</a></li>
-        <li><a href="#arcade">🕹️ Arcade y Clásicos</a></li>
-      </ul>
-    </nav>
-        <button class="cerrar-sesion"onclick="localStorage.removeItem('ultimoAcceso'); window.location.href='index.html';">
-  Cerrar sesión
-</button>
+    <h1 id="titulo">
+      <img src="images/chatgpt.png">
+      El Casino de Trebor
+    </h1>
+    <div class="categorias-container">
+      <nav class="categorias">
+        <ul>
+          <li><a href="#accion">🎮 Acción</a></li>
+          <li><a href="#coches">🏎️ Carreras y Conducción</a></li>
+          <li><a href="#habilidad">🤯 Habilidad</a></li>
+          <li><a href="#deportes">🏀 Deportes</a></li>
+          <li><a href="#puzzles">🧩 Puzzles y Demás</a></li>
+          <li><a href="#arcade">🕹️ Arcade y Clásicos</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
-  <a href="#" class="boton-volver-arriba">↑ Arriba</a>
+<div class="cuadradito">
+  <button class="cerrar-sesion" onclick="localStorage.removeItem('ultimoAcceso'); window.location.href='index.html';">
+    Cerrar sesión
+  </button>
+
+  <div class="fila-botones">
+    <button class="boton-esconder" onclick="redirigirAleatorio()">
+      🐣
+    </button>
+    <button class="boton-volver-arriba" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+      ↑ Arriba
+    </button>
+  </div>
+</div>
+  </div>
   <h2 id="accion">🎮 Acción</h2>
   <div class="zona-juegos">
-  <div class="juego"><a href="Pantalla-juegos.html?juego=evilg"><img src="images/imag/Evilglitch.png"></a><h3>Evilglitch</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=friendlyf"><img src="images/imag/FriendlyFire.png"></a><h3>Friendly Fire</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=gladdihoper"><img src="images/imag/gladdihoper.png"></a><h3>gladdihoper</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Q1k3"><img src="images/imag/q1k3.png"></a><h3>Q1k3</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=radiusraid"><img src="images/imag/radiusrai.png"></a><h3>radiusraid</h3><p>Descripción o enlace</p></div>
- <div class="juego"><a href="Pantalla-juegos.html?juego=Retro-Haunt"><img src="images/imag/retrohaunt.png"></a><h3>Retro Haunt</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=ritz"><img src="images/imag/ritz.png"></a><h3>ritz</h3><p>Descripción o enlace</p></div>
- <div class="juego"><a href="Pantalla-juegos.html?juego=shuttledeck"><img src="images/imag/shuttledeck.png"></a><h3>shuttledeck</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=EdgeNotFound"><img src="images/imag/edge.jpeg"></a><h3>EdgeNotFound</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Ninja-EvilCorp"><img src="images/imag/ninja.png"></a><h3>Ninja VS EvilCorp</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Pushback"><img src="images/imag/Pushback.png"></a><h3>Pushback</h3><p>Descripción o enlace</p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=evilg"><img src="images/imag/Evilglitch.png"></a><h3>Evilglitch</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=friendlyf"><img src="images/imag/FriendlyFire.png"></a><h3>Friendly Fire</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=gladdihoper"><img src="images/imag/gladdihoper.png"></a><h3>gladdihoper</h3><p>⚠️En pruebas⚠️</p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Q1k3"><img src="images/imag/q1k3.png"></a><h3>Q1k3</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=radiusraid"><img src="images/imag/radiusrai.png"></a><h3>radiusraid</h3><p></p></div>
+ <div class="juego"><a href="Pantalla-juegos.html?juego=Retro-Haunt"><img src="images/imag/retrohaunt.png"></a><h3>Retro Haunt</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=ritz"><img src="images/imag/ritz.png"></a><h3>ritz</h3><p></p></div>
+ <div class="juego"><a href="Pantalla-juegos.html?juego=shuttledeck"><img src="images/imag/shuttledeck.png"></a><h3>shuttledeck</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=EdgeNotFound"><img src="images/imag/edge.jpeg"></a><h3>EdgeNotFound</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Ninja-EvilCorp"><img src="images/imag/ninja.png"></a><h3>Ninja VS EvilCorp</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Pushback"><img src="images/imag/Pushback.png"></a><h3>Pushback</h3><p></p></div>
   </div>
   <h2 id="coches">🏎️ Carreras y Conducción</h2>
   <div class="zona-juegos">
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Drifthunters"><img src="images/imag/drifth.png"></a><h3>Drifthunters</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Gop-Her-Kart"><img src="images/imag/Gop Her Kart.jpeg"></a><h3>Gop Her Kart</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Moto-Dash-3D"><img src="images/imag/Moto Dash 3D.jpeg"></a><h3>Moto Dash 3D</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Highway-Traffic"><img src="images/imag/highcar.png"></a><h3>Highway Traffic</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Drive-Mad"><img src="images/imag/drivemad.avif"></a><h3>Drive Mad</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=tunnel-rush"><img src="images/imag/Tunnel Rush.jpg"></a><h3>Tunnel Rush</h3><p>Descripción o enlace</p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Drifthunters"><img src="images/imag/drifth.png"></a><h3>Drifthunters</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Gop-Her-Kart"><img src="images/imag/Gop Her Kart.jpeg"></a><h3>Gop Her Kart</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Moto-Dash-3D"><img src="images/imag/Moto Dash 3D.jpeg"></a><h3>Moto Dash 3D</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Highway-Traffic"><img src="images/imag/highcar.png"></a><h3>Highway Traffic</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Drive-Mad"><img src="images/imag/drivemad.avif"></a><h3>Drive Mad</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=tunnel-rush"><img src="images/imag/Tunnel Rush.jpg"></a><h3>Tunnel Rush</h3><p></p></div>
   </div>
   <h2 id="habilidad">🤯 Habilidad</h2>
   <div class="zona-juegos">
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Baldi-Basics"><img src="images/imag/baldi.jpg"></a><h3>Baldi-Basics</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Chromain-Incident"><img src="images/imag/chroma.png"></a><h3>Chromain Incident</h3><p>Descripción o enlace</p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Baldi-Basics"><img src="images/imag/baldi.jpg"></a><h3>Baldi-Basics</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Chromain-Incident"><img src="images/imag/chroma.png"></a><h3>Chromain Incident</h3><p></p></div>
   <div class="juego"><a href="Pantalla-juegos.html?juego=Cluster-Rush"><img src="images/imag/clusterrush.png"></a><h3>Cluster Rush</h3><p>raro</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=DeathRun-3D"><img src="images/imag/dt3d.png"></a><h3>DeathRun 3D</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=deepestsword"><img src="images/imag/deepest sword.png"></a><h3>deepestsword</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Doodle-Jump"><img src="images/imag/doodlejump.png"></a><h3>Doodle Jump</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Fire-Water"><img src="images/imag/Fire boy and Water girl.png"></a><h3>Fire boy and Water girl</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Flappy-Bird"><img src="images/imag/flappybird.png"></a><h3>Flappy Bird</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Flappy-2048"><img src="images/imag/flappy2048.png"></a><h3>Flappy 2048</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Flappy-Plane"><img src="images/imag/flappyplane.png"></a><h3>Flappy Plane</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=HexGL"><img src="images/imag/HexGL.png"></a><h3>HexGL</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Hextris"><img src="images/imag/hextrix.png"></a><h3>Hextris</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Konnekt"><img src="images/imag/konnekt.png"></a><h3>Konnekt</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Stack"><img src="images/imag/stack.png"></a><h3>Stack</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=stackball"><img src="images/imag/stackball.png"></a><h3>stackball</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=The-Maze-Of-Space-Goblins"><img src="images/imag/The Maze Of Space Goblins.jpg"></a><h3>The Maze Of Space Goblins</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=WeHold"><img src="images/imag/webe.png"></a><h3>We Be Come What We Be Hold</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=WHG2"><img src="images/imag/World hardest game 2.webp"></a><h3>World hardest game 2</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=xx142b2exe"><img src="images/imag/xx14.jpeg"></a><h3>xx142b2exe</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Ducklife1"><img src="images/imag/ducklife.png"></a><h3>Ducklife 1</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Ducklife2"><img src="images/imag/ducklife.png"></a><h3>Ducklife 2</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Ducklife3"><img src="images/imag/ducklife.png"></a><h3>Ducklife 3</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Ducklife4"><img src="images/imag/ducklife.png"></a><h3>Ducklife 4</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Ducklife5"><img src="images/imag/ducklife.png"></a><h3>Ducklife 5</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Sleep-beat"><img src="images/imag/Sleepìng Beauty.png"></a><h3>Sleeping Beauty</h3><p>Descripción o enlace</p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=DeathRun-3D"><img src="images/imag/dt3d.png"></a><h3>DeathRun 3D</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=deepestsword"><img src="images/imag/deepest sword.png"></a><h3>deepestsword</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Doodle-Jump"><img src="images/imag/doodlejump.png"></a><h3>Doodle Jump</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Fire-Water"><img src="images/imag/Fire boy and Water girl.png"></a><h3>Fire boy and Water girl</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Flappy-Bird"><img src="images/imag/flappybird.png"></a><h3>Flappy Bird</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Flappy-2048"><img src="images/imag/flappy2048.png"></a><h3>Flappy 2048</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Flappy-Plane"><img src="images/imag/flappyplane.png"></a><h3>Flappy Plane</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=HexGL"><img src="images/imag/HexGL.png"></a><h3>HexGL</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Hextris"><img src="images/imag/hextrix.png"></a><h3>Hextris</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Konnekt"><img src="images/imag/konnekt.png"></a><h3>Konnekt</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Stack"><img src="images/imag/stack.png"></a><h3>Stack</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=stackball"><img src="images/imag/stackball.png"></a><h3>stackball</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=The-Maze-Of-Space-Goblins"><img src="images/imag/The Maze Of Space Goblins.jpg"></a><h3>The Maze Of Space Goblins</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=WeHold"><img src="images/imag/webe.png"></a><h3>We Be Come What We Be Hold</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=WHG2"><img src="images/imag/World hardest game 2.webp"></a><h3>World hardest game 2</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=xx142b2exe"><img src="images/imag/xx14.jpeg"></a><h3>xx142b2exe</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Ducklife1"><img src="images/imag/ducklife.png"></a><h3>Ducklife 1</h3><p>⚠️En pruebas⚠️</p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Ducklife2"><img src="images/imag/ducklife.png"></a><h3>Ducklife 2</h3><p>⚠️En pruebas⚠️</p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Ducklife3"><img src="images/imag/ducklife.png"></a><h3>Ducklife 3</h3><p>⚠️En pruebas⚠️</p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Ducklife4"><img src="images/imag/ducklife.png"></a><h3>Ducklife 4</h3><p>⚠️En pruebas⚠️</p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Ducklife5"><img src="images/imag/ducklife.png"></a><h3>Ducklife 5</h3><p>⚠️En pruebas⚠️</p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Sleep-beat"><img src="images/imag/Sleepìng Beauty.png"></a><h3>Sleeping Beauty</h3><p></p></div>
   </div>
   <h2 id="deportes">🏀 Deportes</h2>
   <div class="zona-juegos">
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Basket-Bros-IO"><img src="images/imag/basketbros.png"></a><h3>Basket Bros IO</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=BasketBall-Legends-2020"><img src="images/imag/basketlegen.png"></a><h3>BasketBall Legends 2020</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Basketball-Stars"><img src="images/imag/basketballstars.png"></a><h3>Basketball Stars</h3><p>Descripción o enlace</p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Basket-Bros-IO"><img src="images/imag/basketbros.png"></a><h3>Basket Bros IO</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=BasketBall-Legends-2020"><img src="images/imag/basketlegen.png"></a><h3>BasketBall Legends 2020</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Basketball-Stars"><img src="images/imag/basketballstars.png"></a><h3>Basketball Stars</h3><p></p></div>
   </div>
   <h2 id="puzzles">🧩 Puzzles y Demás</h2>
   <div class="zona-juegos">
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Breaklock"><img src="images/imag/break.png"></a><h3>Breaklock</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Captain-Callisto"><img src="images/imag/calisto.png"></a><h3>Captain Callisto</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Chess"><img src="images/imag/chess.webp"></a><h3>Chess</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Connect3"><img src="images/imag/connect3.png"></a><h3>Connect 3</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=The-Rope"><img src="images/imag/cut the rope.png"></a><h3>Cut The Rope</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Cut-T-Rope-H"><img src="images/imag/cut the rope h.webp"></a><h3>Cut The Rope (Holiday)</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Cut-The-Rope-TimeTravel"><img src="images/imag/cut the rope tt.png"></a><h3>Cut The Rope (Time Travel)</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Factory-Balls-Forover"><img src="images/imag/Factory Balls Forover.avif"></a><h3>Factory Balls Forover</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Packabunchas"><img src="images/imag/packabunchas.png"></a><h3>Packabunchas</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Space-Company"><img src="images/imag/space.png"></a><h3>Space Company</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Tetris"><img src="images/imag/tetris.png"></a><h3>Tetris</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Trimps"><img src="images/imag/Trimps.jpg"></a><h3>Trimps</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=2048"><img src="images/imag/2048.png"></a><h3>2048</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=CSGO-Clicker"><img src="images/imag/csgo.png"></a><h3>CSGO Clicker</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Monkey-Mart"><img src="images/imag/Monkey Mart.avif"></a><h3>Monkey Mart</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Riddles-School-2"><img src="images/imag/Riddles School 2.avif"></a><h3>Riddles School 2</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Pushback"><img src="images/imag/Pushback.png"></a><h3>Pushback</h3><p>Descripción o enlace</p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Breaklock"><img src="images/imag/break.png"></a><h3>Breaklock</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Captain-Callisto"><img src="images/imag/calisto.png"></a><h3>Captain Callisto</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Chess"><img src="images/imag/chess.webp"></a><h3>Chess</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Connect3"><img src="images/imag/connect3.png"></a><h3>Connect 3</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=The-Rope"><img src="images/imag/cut the rope.png"></a><h3>Cut The Rope</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Cut-T-Rope-H"><img src="images/imag/cut the rope h.webp"></a><h3>Cut The Rope (Holiday)</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Cut-The-Rope-TimeTravel"><img src="images/imag/cut the rope tt.png"></a><h3>Cut The Rope (Time Travel)</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Factory-Balls-Forover"><img src="images/imag/Factory Balls Forover.avif"></a><h3>Factory Balls Forover</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Packabunchas"><img src="images/imag/packabunchas.png"></a><h3>Packabunchas</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Space-Company"><img src="images/imag/space.png"></a><h3>Space Company</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Tetris"><img src="images/imag/tetris.png"></a><h3>Tetris</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Trimps"><img src="images/imag/Trimps.jpg"></a><h3>Trimps</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=2048"><img src="images/imag/2048.png"></a><h3>2048</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=CSGO-Clicker"><img src="images/imag/csgo.png"></a><h3>CSGO Clicker</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Monkey-Mart"><img src="images/imag/Monkey Mart.avif"></a><h3>Monkey Mart</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Riddles-School-2"><img src="images/imag/Riddles School 2.avif"></a><h3>Riddles School 2</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Pushback"><img src="images/imag/Pushback.png"></a><h3>Pushback</h3><p></p></div>
   </div>
   <h2 id="arcade">🕹️ Arcade y Clásicos</h2>
   <div class="zona-juegos">
   <div class="juego"><a href="Pantalla-juegos.html?juego=BackCountry"><img src="images/imag/backcountry.png"></a><h3>BackCountry</h3><p>Descripción o aenlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Cookie-Clicker"><img src="images/imag/Cooki.png"></a><h3>Cookie Clicker</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=BitLife"><img src="images/imag/bitlife.png"></a><h3>BitLife</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Black-Hole-Square"><img src="images/imag/hole.png"></a><h3>Black Hole Square</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Bounce-Back"><img src="images/imag/bouncee.png"></a><h3>Bounce Back</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=BTD4"><img src="images/imag/bloons.webp"></a><h3>BTD4</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Chorme-Dino"><img src="images/imag/dino.gif"></a><h3>Chorme Dino</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Clicker-Heroes"><img src="images/imag/clickerh.avif"></a><h3>Clicker Heroes</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Cube-Field"><img src="images/imag/cubefield.jpg"></a><h3>Cube Field</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Cubito-Mayhem"><img src="images/imag/cubito.png"></a><h3>Cubito Mayhem</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Earn-To-Die"><img src="images/imag/earntolif.jpg"></a><h3>Earn To Die</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Lets-Surf"><img src="images/imag/Lets Surf.jpg"></a><h3>Lets Surf</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Om-Nom-Bounce"><img src="images/imag/Om Nom Bounce!.webp"></a><h3>Om Nom Bounce!</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Pacman"><img src="images/imag/pacman.jpg"></a><h3>Pacman</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Paper-io"><img src="images/imag/Paper.io.png"></a><h3>Paper.io</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=RedBall4"><img src="images/imag/RedBall 4.png"></a><h3>RedBall 4</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=RetroBowl"><img src="images/imag/RetroBowl.avif"></a><h3>RetroBowl</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Roadblocks"><img src="images/imag/roadblocks.png"></a><h3>Roadblocks</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Metal3"><img src="images/imag/Scrap Metal 3.jpg"></a><h3>Scrap Metal 3</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Slope"><img src="images/imag/Slope.png"></a><h3>Slope</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Slope2"><img src="images/imag/slope2.png"></a><h3>Slope 2</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Snow-Battle"><img src="images/imag/snow.jpeg"></a><h3>Snow Battle</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Space-Huggers"><img src="images/imag/spacehungers.png"></a><h3>Space Huggers</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Space-Invaders"><img src="images/imag/spacei.jpg"></a><h3>Space Invaders</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Tiny-Fishing"><img src="images/imag/Tiny Fishing.avif"></a><h3>Tiny Fishing</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Tomb-Of-The-Mask"><img src="images/imag/tomb.png"></a><h3>Tomb Of The Mask</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Tower-Master"><img src="images/imag/Tower Master.webp"></a><h3>Tower Master</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Vex3"><img src="images/imag/Vex 3.avif"></a><h3>Vex 3</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Vex4"><img src="images/imag/Vex 4.png"></a><h3>Vex 4</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Vex5"><img src="images/imag/Vex 5.webp"></a><h3>Vex 5</h3><p>Descripción o enlace</p></div>
-  <div class="juego"><a href="Pantalla-juegos.html?juego=Vex6"><img src="images/imag/Vex 6.webp"></a><h3>Vex 6</h3><p>Descripción o enlace</p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Cookie-Clicker"><img src="images/imag/Cooki.png"></a><h3>Cookie Clicker</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=BitLife"><img src="images/imag/bitlife.png"></a><h3>BitLife</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Black-Hole-Square"><img src="images/imag/hole.png"></a><h3>Black Hole Square</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Bounce-Back"><img src="images/imag/bouncee.png"></a><h3>Bounce Back</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=BTD4"><img src="images/imag/bloons.webp"></a><h3>BTD4</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Chorme-Dino"><img src="images/imag/dino.gif"></a><h3>Chorme Dino</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Clicker-Heroes"><img src="images/imag/clickerh.avif"></a><h3>Clicker Heroes</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Cube-Field"><img src="images/imag/cubefield.jpg"></a><h3>Cube Field</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Cubito-Mayhem"><img src="images/imag/cubito.png"></a><h3>Cubito Mayhem</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Earn-To-Die"><img src="images/imag/earntolif.jpg"></a><h3>Earn To Die</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Lets-Surf"><img src="images/imag/Lets Surf.jpg"></a><h3>Lets Surf</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Om-Nom-Bounce"><img src="images/imag/Om Nom Bounce!.webp"></a><h3>Om Nom Bounce!</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Pacman"><img src="images/imag/pacman.jpg"></a><h3>Pacman</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Paper-io"><img src="images/imag/Paper.io.png"></a><h3>Paper.io</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=RedBall4"><img src="images/imag/RedBall 4.png"></a><h3>RedBall 4</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=RetroBowl"><img src="images/imag/RetroBowl.avif"></a><h3>RetroBowl</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Roadblocks"><img src="images/imag/roadblocks.png"></a><h3>Roadblocks</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Metal3"><img src="images/imag/Scrap Metal 3.jpg"></a><h3>Scrap Metal 3</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Slope"><img src="images/imag/Slope.png"></a><h3>Slope</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Slope2"><img src="images/imag/slope2.png"></a><h3>Slope 2</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Snow-Battle"><img src="images/imag/snow.jpeg"></a><h3>Snow Battle</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Space-Huggers"><img src="images/imag/spacehungers.png"></a><h3>Space Huggers</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Space-Invaders"><img src="images/imag/spacei.jpg"></a><h3>Space Invaders</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Tiny-Fishing"><img src="images/imag/Tiny Fishing.avif"></a><h3>Tiny Fishing</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Tomb-Of-The-Mask"><img src="images/imag/tomb.png"></a><h3>Tomb Of The Mask</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Tower-Master"><img src="images/imag/Tower Master.webp"></a><h3>Tower Master</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Vex3"><img src="images/imag/Vex 3.avif"></a><h3>Vex 3</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Vex4"><img src="images/imag/Vex 4.png"></a><h3>Vex 4</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Vex5"><img src="images/imag/Vex 5.webp"></a><h3>Vex 5</h3><p></p></div>
+  <div class="juego"><a href="Pantalla-juegos.html?juego=Vex6"><img src="images/imag/Vex 6.webp"></a><h3>Vex 6</h3><p></p></div>
   </div>
   <div class="pie">
         <p class="info_pequena_importante">⚠️ El juego puede provocar adicción ⚠️</p>
