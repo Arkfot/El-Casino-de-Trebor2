@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const TIEMPO_EXPIRACION = 30 * 1000; // ⏱️ 30 segundos; // 5 horas
+  const TIEMPO_EXPIRACION = 5 * 60 * 60 * 1000;  // 5 horas
   const ultimoAcceso = localStorage.getItem("ultimoAcceso");
   console.log("ultimo acceso:", ultimoAcceso);
   console.log("diferencia:", Date.now() - parseInt(ultimoAcceso));
