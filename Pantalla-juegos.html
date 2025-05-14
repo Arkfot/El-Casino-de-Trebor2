@@ -5,6 +5,7 @@
   <title>Classroom</title>
   <link rel="stylesheet" href="css/pantalla.css">
   <script src="js/pantalla.js" defer></script>
+  <script src="js/esconder.js"></script>
 </head>
 <body>
 <div class="contenedor-iframe">
@@ -12,7 +13,9 @@
   <div class="boton-wrapper">
       <button onclick="abrirFullscreen()" class="pantalla-completa">Pantalla Completa</button>
       <a  class="volver" href="juegos.html">Volver</a>
-      <a  class="esconder" href="https://classroom.google.com/u/1/h">Esconder</a>
+          <button class="cerrar-sesion" onclick="redirigirAleatorio()">
+      🐣
+    </button>
       <button onclick="localStorage.removeItem('ultimoAcceso'); window.location.href='index.html';" class="cerrar-sesion">
         Cerrar sesión
       </button>
