@@ -3,16 +3,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const passwordInput = document.getElementById("passwordInput");
   const errorMsg = document.getElementById("error-msg");
   const contraseñaCorrecta = "1234";
-  const tiempoExpiracion = 5 * 60 * 60 * 1000; // ⏱️ 5 horas en milisegundos
+  const tiempoExpiracion = 30 * 1000; // ⏱️ 30 segundos // 5 horas
   const ultimoAcceso = localStorage.getItem("ultimoAcceso");
 
-  // Si la contraseña sigue siendo válida, redirigir automáticamente
+  // ✅ Solo redirigir si hay acceso válido
   if (ultimoAcceso && (Date.now() - parseInt(ultimoAcceso) < tiempoExpiracion)) {
-    window.location.href = "juegos.html";
+    window.location.href = "/juegos.html";
     return;
   }
 
-  // Al enviar el formulario
+  // ❌ NO guardar tiempo aquí (¡esto causaba el error!)
+
+  // ✅ Guardar tiempo SOLO si la contraseña es correcta
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
