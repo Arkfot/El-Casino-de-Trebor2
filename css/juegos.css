@@ -10,7 +10,10 @@ body {
   background-color: #121212;
   font-family: Arial, sans-serif;
 }
-
+.icono {
+  width: 64px;
+  height: 64px;
+}
 .barra {
   position: relative;
   background-color: #001025f9;
@@ -298,4 +301,14 @@ h2 {
 .sugerencias-lista li.seleccionado {
   background-color: #0055aa;
   color: white;
+}
+@media (max-width: 1650px) {
+  .cuadradito {
+    top: auto;
+    bottom: 20px;
+    right: 10px;
+    width: 170px;
+    padding: 12px;
+    font-size: 14px;
+  }
 }
