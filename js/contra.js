@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("formulario");
   const passwordInput = document.getElementById("passwordInput");
   const errorMsg = document.getElementById("error-msg");
-  const contraseñaCorrecta = "1234";
+  const contraseñaCorrecta = "trevalski777";
   const tiempoExpiracion = 5 * 60 * 60 * 1000; // 5 horas
   const ultimoAcceso = localStorage.getItem("ultimoAcceso");
 
