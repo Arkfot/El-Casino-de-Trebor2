@@ -25,6 +25,20 @@ body {
   width: 100%;
   text-align: center;
 }
+.buscador-con-logo {
+  display: flex;
+  align-items: center;
+}
+
+.buscador-con-logo #buscador {
+  flex: 1;
+}
+
+.logo-derecha img {
+  height: 40px;
+  width: auto;
+  margin-left: 10px;
+}
 .cuadradito {
   position: fixed;
   top: 350px;

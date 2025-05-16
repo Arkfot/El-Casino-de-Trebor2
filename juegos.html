@@ -19,12 +19,16 @@
   </h1>
 
   <div class="busqueda-container">
-    <div class="buscador-wrapper">
+  <div class="buscador-wrapper">
+    <div class="buscador-con-logo">
       <input type="text" id="buscador" oninput="buscarJuegos()" placeholder="Buscar juegos..." autocomplete="off">
-      <ul id="sugerencias" class="sugerencias-lista"></ul>
+      <div class="logo-derecha">
+        <a href="https://sites.google.com/strinidadvillalba.com/kovalski/vídeos"><img src="images/youtube.png"></a>
+      </div>
+    </div>
+    <ul id="sugerencias" class="sugerencias-lista"></ul>
   </div>
-  </div>
-
+</div>
   <div class="categorias-container" id="categorias">
     <nav class="categorias">
       <ul>
@@ -37,6 +41,7 @@
       </ul>
     </nav>
   </div>
+  
 </div>
 <div class="cuadradito">
   <button class="cerrar-sesion" onclick="localStorage.removeItem('ultimoAcceso'); window.location.href='index.html';">
@@ -170,9 +175,8 @@
         <p class="info_pequena">Developer: Trebor</p>
         <p class="info_pequena">Versión: DEMO</p>
         <div class="enlaces">
-          <a href="#"> Política de privacidad</a>
+          <a href="politicas.html"> Política de privacidad y quejas</a>
           <a href="#"> Política sobre las cookies</a>
-          <a href="#"> Política de quejas</a>
   </div>
   <script src="js/proteccion.js"></script>
 </body>
