@@ -12,43 +12,48 @@
   <link rel="icon" type="image/png" sizes="128x128" href="images/icon2.png">
 </head>
 <body>
-    <body>
-  <div id="user-id-display" style="
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #222;
-  color: #0f0;
-  font-family: monospace;
-  padding: 10px;
-  text-align: center;
-  z-index: 9999;
-">
-  ID: <span id="user_code">Cargando...</span>
+<div id="user-public-info">
+  <div id="nombre-publico-display">Nombre: <span id="nombre_publico">Cargando...</span></div>
+  <button onclick="mostrarFormularioNombre()">✏️ Cambiar</button>
+  <form id="form-nombre" style="display:none;" onsubmit="guardarNuevoNombre(event)">
+    <input type="text" id="nuevo_nombre" maxlength="50" placeholder="Nuevo nombre público" required />
+    <button type="submit">Guardar</button>
+  </form>
 </div>
-      <div class="chat-container">
-    <div id="messages"></div>
-    <form id="chat-form">
+
+  <div class="chat-wrapper">
+  <aside class="sidebar">
+    <h2>Chats</h2>
+    <ul class="user-list">
+      <li class="user-item active">General</li>
+      <!-- Más usuarios o canales aquí -->
+    </ul>
+  </aside>
+
+  <main class="chat-area">
+    <header class="chat-header">
+      <h2>Chat General</h2>
+      <div id="user-id-display">ID: <span id="user_code">Cargando...</span></div>
+    </header>
+
+    <div id="messages" class="chat-messages"></div>
+
+    <form id="chat-form" class="chat-input">
       <input type="text" id="message" placeholder="Escribe un mensaje..." required>
       <button type="submit">Enviar</button>
     </form>
-  </div>
-  <script src="script.js"></script>
-<div class="cuadradito">
+  </main>
+  <div class="floating-box">
   <button class="cerrar-sesion" onclick="localStorage.removeItem('ultimoAcceso'); window.location.href='index.html';">
-    Cerrar sesión
+    🔒 Cerrar sesión
   </button>
 
-  <div class="fila-botones">
-    <button class="boton-esconder" onclick="redirigirAleatorio()">
-      🐣
-    </button>
-    <button class="boton-volver-arriba" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
-      ↑ Arriba
-    </button>
+  <div class="botonera">
+    <button class="boton-esconder" onclick="redirigirAleatorio()">🐣 Esconderse</button>
   </div>
 </div>
+</div>
+
 <script src="chat.js"></script>
 <script src="js/proteccion.js"></script>
 </body>
