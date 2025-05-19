@@ -13,6 +13,20 @@
   <link rel="icon" type="image/png" sizes="128x128" href="images/icon2.png">
 </head>
 <body>
+  <div id="user-id-display" style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #222;
+  color: #0f0;
+  font-family: monospace;
+  padding: 10px;
+  text-align: center;
+  z-index: 9999;
+">
+  ID de usuario: <span id="user-id">Cargando...</span>
+</div>
 <div class="barra">
   <h1 id="titulo">
     <img src="images/chatgpt.png">
@@ -179,6 +193,17 @@
           <a href="politicas.html"> Política de privacidad y quejas</a>
           <a href="#"> Política sobre las cookies</a>
   </div>
+  <script>
+  // Obtener o generar ID único del usuario
+  let userId = localStorage.getItem("user_id");
+  if (!userId) {
+    userId = crypto.randomUUID(); // genera un ID UUID
+    localStorage.setItem("user_id", userId);
+  }
+
+  // Mostrar el ID en la parte superior
+  document.getElementById("user-id").textContent = userId;
+</script>
   <script src="js/proteccion.js"></script>
 </body>
 </html>
