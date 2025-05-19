@@ -28,7 +28,7 @@
     <div id="user-public-info">
         <div id="nombre-publico-display">Usuario: <span id="nombre_publico">Cargando...</span></div>
         <div id="user-id-display">ID: <span id="user_code">Cargando...</span></div>
-        <button onclick="mostrarFormularioNombre()">✏️</button>
+        <button style="display: none;" onclick="mostrarFormularioNombre()">✏️</button>
         <form id="form-nombre" style="display:none;" onsubmit="guardarNuevoNombre(event)">
         <input type="text" id="nuevo_nombre" maxlength="50" placeholder="Nuevo nombre público" required />
         <button type="submit">Guardar</button>
@@ -50,7 +50,7 @@
   </button>
 
   <div class="botonera">
-    <button class="boton-esconder" onclick="redirigirAleatorio()">🐣 Esconderse</button>
+    <button class="boton-esconder" onclick="redirigirAleatorio()">🐣</button>
   </div>
 </div>
 </div>
