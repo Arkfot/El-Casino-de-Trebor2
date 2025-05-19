@@ -39,6 +39,11 @@ body {
   width: auto;
   margin-left: 10px;
 }
+.logo-izquierda img {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
 .cuadradito {
   position: fixed;
   top: 350px;
@@ -212,6 +217,7 @@ h2 {
   border-top: 2px solid #111;
   text-transform:uppercase ;
   color:#eee;
+  margin: auto;
 }
 .info_pequena_importante{
   font-weight: 800;

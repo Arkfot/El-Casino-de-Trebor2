@@ -1,0 +1,109 @@
+body {
+  font-family: Arial;
+  background: #141414;
+}
+
+.chat-container {
+  width: 300px;
+  margin: 50px auto;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+#messages {
+  height: 300px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+#chat-form {
+  display: flex;
+}
+
+#message {
+  flex: 1;
+  padding: 5px;
+}
+
+button {
+  padding: 5px 10px;
+}
+.cuadradito {
+  position: fixed;
+  top: 350px;
+  right: 40px;
+  width: 240px;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.cerrar-sesion {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.fila-botones {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.boton-esconder,
+.boton-volver-arriba {
+  flex: 1;
+  box-sizing: border-box;
+  border: none;
+  padding: 10px 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.boton-esconder {
+  background-color: #444;
+  color: white;
+}
+
+.boton-volver-arriba {
+  background-color: #003366;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.cerrar-sesion:hover,
+.boton-esconder:hover {
+  background-color: #666;
+}
+
+.boton-volver-arriba:hover {
+  background-color: #0055aa;
+}
+@media (max-width: 1650px) {
+  .cuadradito {
+    top: auto;
+    bottom: 20px;
+    right: 10px;
+    width: 170px;
+    padding: 12px;
+    font-size: 14px;
+  }
+}

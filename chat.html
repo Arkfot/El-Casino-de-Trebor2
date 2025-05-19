@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classroom</title>
+  <link rel="stylesheet" href="css/chat.css">
+  <script src="js/esconder.js"></script>
+  <script src="js/busqueda.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icon2.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/icon2.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="images/icon2.png">
+</head>
+<body>
+    <body>
+  <div id="user-id-display" style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #222;
+  color: #0f0;
+  font-family: monospace;
+  padding: 10px;
+  text-align: center;
+  z-index: 9999;
+">
+  ID: <span id="user-id">Cargando...</span>
+</div>
+      <div class="chat-container">
+    <div id="messages"></div>
+    <form id="chat-form">
+      <input type="text" id="message" placeholder="Escribe un mensaje..." required>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+<div class="cuadradito">
+  <button class="cerrar-sesion" onclick="localStorage.removeItem('ultimoAcceso'); window.location.href='index.html';">
+    Cerrar sesión
+  </button>
+
+  <div class="fila-botones">
+    <button class="boton-esconder" onclick="redirigirAleatorio()">
+      🐣
+    </button>
+    <button class="boton-volver-arriba" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+      ↑ Arriba
+    </button>
+  </div>
+</div>
+<script>
+  // Buscar si ya hay un user_id numérico guardado
+  let userId = localStorage.getItem("user_id_num");
+
+  if (!userId) {
+    // Si no existe, migramos desde un UUID (si había uno)
+    let oldId = localStorage.getItem("user_id");
+
+    // Generar un número aleatorio entre 500 y 1000
+    userId = Math.floor(Math.random() * 501) + 500;
+
+    // Guardar el nuevo ID numérico
+    localStorage.setItem("user_id_num", userId);
+
+    // Opcional: Eliminar el viejo UUID si ya no lo necesitas
+    if (oldId) {
+      localStorage.removeItem("user_id");
+    }
+  }
+
+  // Mostrar el nuevo ID numérico
+  document.getElementById("user-id").textContent = userId;
+</script>
+<script src="chat.js"></script>
+</body>
+</html>

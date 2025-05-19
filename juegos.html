@@ -25,7 +25,7 @@
   text-align: center;
   z-index: 9999;
 ">
-  ID de usuario: <span id="user-id">Cargando...</span>
+  ID: <span id="user-id">Cargando...</span>
 </div>
 <div class="barra">
   <h1 id="titulo">
@@ -36,9 +36,12 @@
   <div class="busqueda-container">
   <div class="buscador-wrapper">
     <div class="buscador-con-logo">
+      <div class="logo-izquierda">
+        <a href="https://sites.google.com/strinidadvillalba.com/kovalski/vídeos"><img src="images/youtube.png"></a>
+      </div>
       <input type="text" id="buscador" oninput="buscarJuegos()" placeholder="Buscar juegos..." autocomplete="off">
       <div class="logo-derecha">
-        <a href="https://sites.google.com/strinidadvillalba.com/kovalski/vídeos"><img src="images/youtube.png"></a>
+        <a href="./chat.html"><img src="images/chat.png"></a>
       </div>
     </div>
     <ul id="sugerencias" class="sugerencias-lista"></ul>
@@ -193,15 +196,27 @@
           <a href="politicas.html"> Política de privacidad y quejas</a>
           <a href="#"> Política sobre las cookies</a>
   </div>
-  <script>
-  // Obtener o generar ID único del usuario
-  let userId = localStorage.getItem("user_id");
+<script>
+  // Buscar si ya hay un user_id numérico guardado
+  let userId = localStorage.getItem("user_id_num");
+
   if (!userId) {
-    userId = crypto.randomUUID(); // genera un ID UUID
-    localStorage.setItem("user_id", userId);
+    // Si no existe, migramos desde un UUID (si había uno)
+    let oldId = localStorage.getItem("user_id");
+
+    // Generar un número aleatorio entre 500 y 1000
+    userId = Math.floor(Math.random() * 501) + 500;
+
+    // Guardar el nuevo ID numérico
+    localStorage.setItem("user_id_num", userId);
+
+    // Opcional: Eliminar el viejo UUID si ya no lo necesitas
+    if (oldId) {
+      localStorage.removeItem("user_id");
+    }
   }
 
-  // Mostrar el ID en la parte superior
+  // Mostrar el nuevo ID numérico
   document.getElementById("user-id").textContent = userId;
 </script>
   <script src="js/proteccion.js"></script>

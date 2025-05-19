@@ -9,6 +9,20 @@
         <script src="js/contra.js" defer></script>    
     </head>
     <body>
+    <div id="user-id-display" style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #222;
+  color: #0f0;
+  font-family: monospace;
+  padding: 10px;
+  text-align: center;
+  z-index: 9999;
+">
+  ID: <span id="user-id">Cargando...</span>
+</div>
         <div class="caja">
             <form id="formulario">
                 <input type="password" id="passwordInput" class="contraseña"  placeholder="password" >
@@ -16,5 +30,28 @@
                 <div id="error-msg"></div>
             </form>
         </div>
+<script>
+  // Buscar si ya hay un user_id numérico guardado
+  let userId = localStorage.getItem("user_id_num");
+
+  if (!userId) {
+    // Si no existe, migramos desde un UUID (si había uno)
+    let oldId = localStorage.getItem("user_id");
+
+    // Generar un número aleatorio entre 500 y 1000
+    userId = Math.floor(Math.random() * 501) + 500;
+
+    // Guardar el nuevo ID numérico
+    localStorage.setItem("user_id_num", userId);
+
+    // Opcional: Eliminar el viejo UUID si ya no lo necesitas
+    if (oldId) {
+      localStorage.removeItem("user_id");
+    }
+  }
+
+  // Mostrar el nuevo ID numérico
+  document.getElementById("user-id").textContent = userId;
+</script>
     </body>
 </html>
