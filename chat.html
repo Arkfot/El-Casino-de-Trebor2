@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/chat.css">
   <script src="js/esconder.js"></script>
   <script src="js/busqueda.js"></script>
+  <script src="js/ip.js" defer></script>  
   <link rel="icon" type="image/png" sizes="32x32" href="images/icon2.png">
   <link rel="icon" type="image/png" sizes="64x64" href="images/icon2.png">
   <link rel="icon" type="image/png" sizes="128x128" href="images/icon2.png">
@@ -25,7 +26,7 @@
   text-align: center;
   z-index: 9999;
 ">
-  ID: <span id="user-id">Cargando...</span>
+  ID: <span id="user_code">Cargando...</span>
 </div>
       <div class="chat-container">
     <div id="messages"></div>
@@ -49,29 +50,6 @@
     </button>
   </div>
 </div>
-<script>
-  // Buscar si ya hay un user_id numérico guardado
-  let userId = localStorage.getItem("user_id_num");
-
-  if (!userId) {
-    // Si no existe, migramos desde un UUID (si había uno)
-    let oldId = localStorage.getItem("user_id");
-
-    // Generar un número aleatorio entre 500 y 1000
-    userId = Math.floor(Math.random() * 501) + 500;
-
-    // Guardar el nuevo ID numérico
-    localStorage.setItem("user_id_num", userId);
-
-    // Opcional: Eliminar el viejo UUID si ya no lo necesitas
-    if (oldId) {
-      localStorage.removeItem("user_id");
-    }
-  }
-
-  // Mostrar el nuevo ID numérico
-  document.getElementById("user-id").textContent = userId;
-</script>
 <script src="chat.js"></script>
 </body>
 </html>
