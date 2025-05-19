@@ -51,3 +51,58 @@ async function obtenerCodigoUsuario() {
 }
 
 obtenerCodigoUsuario();
+async function cargarNombrePublico() {
+  const code = localStorage.getItem("user_code");
+  if (!code) return;
+
+  try {
+    const res = await fetch(`nombre_publico.php?code=${code}`);
+    const data = await res.json();
+
+    if (data && data.nombre_publico) {
+      document.getElementById("nombre_publico").textContent = data.nombre_publico;
+    } else {
+      document.getElementById("nombre_publico").textContent = "(anónimo)";
+    }
+
+    if (data.puede_cambiar === false) {
+      document.querySelector("#form-nombre button").disabled = true;
+    }
+  } catch (err) {
+    console.error("Error al cargar nombre público:", err);
+  }
+}
+
+function mostrarFormularioNombre() {
+  document.getElementById("form-nombre").style.display = "block";
+}
+
+async function guardarNuevoNombre(event) {
+  event.preventDefault();
+  const nuevoNombre = document.getElementById("nuevo_nombre").value.trim();
+  const code = localStorage.getItem("user_code");
+
+  if (!nuevoNombre || !code) return;
+
+  try {
+    const res = await fetch("nombre_publico.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ code, nuevoNombre })
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      alert("✅ Nombre actualizado correctamente");
+      document.getElementById("form-nombre").style.display = "none";
+      cargarNombrePublico();
+    } else {
+      alert(`⚠️ ${data.message}`);
+    }
+  } catch (err) {
+    console.error("Error al guardar nombre:", err);
+    alert("🚫 Error al guardar nombre");
+  }
+}
+
+obtenerCodigoUsuario().then(cargarNombrePublico);
