@@ -82,6 +82,9 @@ async function obtenerCodigoUsuario() {
 }
 
 async function cargarNombrePublico() {
+  const data = await res.json();
+  console.log("🧪 Datos de nombre_publico.php:", data);
+
   const code = localStorage.getItem("user_code");
   if (!code) return;
 

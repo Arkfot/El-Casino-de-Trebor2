@@ -26,14 +26,35 @@
     <header class="chat-header">
     <h2>Chat General</h2>
     <div id="user-public-info">
-        <div id="nombre-publico-display">Usuario: <span id="nombre_publico">Cargando...</span></div>
-        <div id="user-id-display">ID: <span id="user_code">Cargando...</span></div>
-        <button style="display: none;" onclick="mostrarFormularioNombre()">✏️</button>
-        <form id="form-nombre" style="display:none;" onsubmit="guardarNuevoNombre(event)">
-        <input type="text" id="nuevo_nombre" maxlength="50" placeholder="Nuevo nombre público" required />
-        <button type="submit">Guardar</button>
-        </form>
-    </div>
+  <div id="nombre-publico-display">
+    Usuario: <span id="nombre_publico">Cargando...</span>
+  </div>
+  <div id="user-id-display">
+    ID: <span id="user_code">Cargando...</span>
+  </div>
+
+  <!-- Botón para abrir el form (inicialmente oculto) -->
+  <button id="btn-editar-nombre" style="display:none;" onclick="mostrarFormularioNombre()">
+    ✏️
+  </button>
+
+  <!-- Formulario para editar nombre -->
+  <form
+    id="form-nombre"
+    style="display:none;"
+    onsubmit="guardarNuevoNombre(event)"
+  >
+    <input
+      type="text"
+      id="nuevo_nombre"
+      maxlength="50"
+      placeholder="Nuevo nombre público"
+      required
+    />
+    <button type="submit">Guardar</button>
+  </form>
+</div>
+
     </header>
 
 
