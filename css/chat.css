@@ -142,6 +142,70 @@ body {
   font-family: 'Courier New', monospace;
   cursor: pointer;
 }
+/* Botón azul con ícono de lápiz */
+.boton-editar-nombre {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+  border: 1px solid #c3d5f4;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.boton-editar-nombre:hover {
+  background-color: #d2e3fc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ícono de lápiz más suave */
+.icono-lapiz {
+  font-size: 16px;
+}
+
+/* Formulario más limpio */
+.form-cambiar-nombre {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Input estilizado */
+.input-nombre {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 220px;
+  transition: border-color 0.3s ease;
+}
+
+.input-nombre:focus {
+  outline: none;
+  border-color: #1a73e8;
+}
+
+/* Botón guardar azulado */
+.boton-guardar-nombre {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-guardar-nombre:hover {
+  background-color: #1669c1;
+}
 
 /* Mensajes */
 .chat-messages {

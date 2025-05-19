@@ -34,25 +34,26 @@
   </div>
 
   <!-- Botón para abrir el form (inicialmente oculto) -->
-  <button id="btn-editar-nombre" style="display:none;" onclick="mostrarFormularioNombre()">
-    ✏️
-  </button>
+<!-- Botón para mostrar el formulario -->
+<button id="btn-editar-nombre" onclick="mostrarFormularioNombre()" style="display: none;" class="boton-editar-nombre">
+  <span class="icono-lapiz">✏️</span> Cambiar nombre
+</button>
 
-  <!-- Formulario para editar nombre -->
-  <form
-    id="form-nombre"
-    style="display:none;"
-    onsubmit="guardarNuevoNombre(event)"
-  >
-    <input
-      type="text"
-      id="nuevo_nombre"
-      maxlength="50"
-      placeholder="Nuevo nombre público"
-      required
-    />
-    <button type="submit">Guardar</button>
-  </form>
+<!-- Formulario para editar nombre -->
+<form id="form-nombre" onsubmit="guardarNuevoNombre(event)" style="display: none;" class="form-cambiar-nombre">
+  <input
+    type="text"
+    id="nuevo_nombre"
+    maxlength="50"
+    placeholder="Escribe tu nuevo nombre..."
+    required
+    class="input-nombre"
+  />
+  <button type="submit" class="boton-guardar-nombre">
+    💾 Guardar
+  </button>
+</form>
+
 </div>
 
     </header>
