@@ -78,11 +78,69 @@ body {
   color: #fff;
   font-size: 20px;
 }
+#user-public-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.9em;
+  gap: 5px;
+}
 
-#user-id-display {
-  font-size: 12px;
+#user-public-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: 'Courier New', monospace;
   color: #0f0;
-  font-family: monospace;
+  background-color: #111;
+  padding: 10px;
+  border-radius: 8px;
+  gap: 4px;
+  box-shadow: 0 0 5px #0f02;
+}
+
+#user-public-info div {
+  font-size: 0.85em;
+}
+
+#user-public-info span {
+  font-weight: bold;
+}
+
+#user-public-info button {
+  background: transparent;
+  border: 1px solid #0f0;
+  color: #0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  transition: background 0.3s, color 0.3s;
+}
+
+#user-public-info button:hover {
+  background: #0f0;
+  color: #000;
+}
+
+#form-nombre input {
+  background-color: #000;
+  color: #0f0;
+  border: 1px solid #0f0;
+  border-radius: 4px;
+  padding: 3px 6px;
+  font-family: 'Courier New', monospace;
+}
+
+#form-nombre button {
+  background-color: #0f0;
+  color: #000;
+  border: none;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-left: 5px;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
 }
 
 /* Mensajes */
