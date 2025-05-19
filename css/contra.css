@@ -3,7 +3,7 @@ body{
     font-family: sans-serif;
     background: #eee;
 }
-.conjunto{
+.caja{
     width: 200px;
     height: 60px;
     margin: auto;
@@ -19,7 +19,7 @@ body{
     transition-property: box-shadow, background-color;
     transition-duration: 1s;
 }
-.conjunto:hover{
+.caja:hover{
     box-shadow: 0 0 6px #012;
     background-color: #5f0000;
 }
@@ -39,7 +39,7 @@ body{
     border-radius:0px 0px 3px 3px;
     padding-right: 10px;
 }
-.conjunto:hover #error-msg{
+.caja:hover #error-msg{
     color: #010101; 
     background-color: #92041094;
 }
@@ -56,7 +56,7 @@ body{
     transition-property: color,background-color, border, box-shadow;
     transition-duration:1s;
 }
-.conjunto:hover .contraseña {
+.caja:hover .contraseña {
     color: #a3000e;
     background-color: #c0bebe;
     box-shadow: 0 0 8px #020b15;
@@ -70,7 +70,7 @@ body{
     transition-duration: 1s;
     font-weight: bold;
     }
-.conjunto:hover .contraseña::placeholder {
+.caja:hover .contraseña::placeholder {
     opacity: 70%;
     color: #920410;
 }
